@@ -1,0 +1,39 @@
+/*
+   Filename:    SinX.java
+   Programmer:  Leung Yuet Kan (210154364)
+   Description: The purpose of  program is that calcuate the series 
+*/
+
+import java.util.Scanner;
+public class SinX {
+
+    public static void main(String[] args) 
+   
+   { Scanner input = new  Scanner (System.in);
+
+
+
+   int i = 14;   // how many time the program would be run 
+   double dbly; 
+   double count;
+   double sum ;
+   double dblx;
+   
+         //get x 
+         System.out.println("please input x");
+        dblx = input.nextDouble();
+        sum = 0.0;
+         //loop
+        for (int a = 1 ; a<=14 ; a++)
+		{
+        count = 1.0;
+	        //
+            for (dbly =1  ; dbly<=27 ; dbly++)
+			count *= (dblx/dbly);
+		    count *= Math.pow(-1.0, i-1);
+	        sum += count;
+		   
+	    }
+	    System.out.println( "Sin("+dblx+") = "+ sum);
+    }
+  }
